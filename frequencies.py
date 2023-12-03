@@ -3,5 +3,9 @@
 
 def frequencies(items):
     frequencies = {}
-    # Your code goes here
+
+    for item in items:
+        if isinstance(item, (int, float, str, tuple)):
+            frequencies[item] = frequencies.get(item, 0) + 1
+
     return frequencies
